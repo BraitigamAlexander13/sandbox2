@@ -1,4 +1,6 @@
-﻿import fs from "fs";
+﻿/* eslint-disable @typescript-eslint/no-inferrable-types */
+/* eslint-disable no-var */
+import fs from "fs";
 import http from "http";
 import url from "url";
 
@@ -27,6 +29,10 @@ export default class Content {
         res.write("<body><form><pre>");
 
         // Kezd a kódolást innen -->
+        var age: number = 32; // number variable
+        var name: string = "John"; // string variable
+        var isUpdated: boolean = true; // Boolean variable
+        res.write(`${age} ${name} ${isUpdated}`);
 
         res.write("Egyszerű Hello World!!\n");
 
