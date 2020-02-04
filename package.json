@@ -1,0 +1,67 @@
+{
+    "name": "jedlik-typescript-vscode-template",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Jedlik project template for using TypeScript, Jest and Node.js in VS Code.",
+    "engines": {
+        "node": "10.x"
+    },
+    "main": "app.js",
+    "repository": {
+        "private": true,
+        "type": "git",
+        "url": "https://github.com/nitslaszlo/JedlikTsTemplate"
+    },
+    "scripts": {
+        "start": "node ./dist/app.js",
+        "compile": "tsc",
+        "compile:watch": "tsc --watch",
+        "postinstall": "tsc",
+        "kill": "taskkill /im node.exe /F",
+        "test": "jest || ECHO.",
+        "dev": "nodemon"
+    },
+    "author": "Nits László",
+    "license": "MIT",
+    "dependencies": {
+        "tslib": "^1.10.0"
+    },
+    "devDependencies": {
+        "@types/jest": "^25.1.1",
+        "@types/node": "^13.7.0",
+        "@typescript-eslint/eslint-plugin": "^2.19.0",
+        "@typescript-eslint/parser": "^2.19.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "jest": "^25.1.0",
+        "nodemon": "^2.0.2",
+        "prettier": "^1.19.1",
+        "ts-jest": "^25.1.0",
+        "typescript": "^3.7.5"
+    },
+    "jest": {
+        "roots": [
+            "<rootDir>/src"
+        ],
+        "preset": "ts-jest",
+        "verbose": true,
+        "testEnvironment": "node",
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json"
+        ],
+        "globals": {
+            "ts-jest": {
+                "diagnostics": false
+            }
+        }
+    }
+}
